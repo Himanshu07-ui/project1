@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu's - Portfolio</title>
+    
+    <style>
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Makes navigation links jump smoothly */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky; /* Makes the nav bar stay at the top */
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav li {
+            margin-left: 25px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        header nav a:hover {
+            color: #3498db;
+        }
+
+        /* --- Hero (Home) Section --- */
+        .hero {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            color: #fff;
+            font-size: 2.8rem;
+        }
+
+        .hero .intro {
+            font-size: 1.2rem;
+            color: #ecf0f1;
+            max-width: 600px;
+            margin: 20px auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* --- About Section --- */
+        #about {
+            background-color: #fff;
+        }
+
+        /* --- Projects Section --- */
+        #projects {
+            /* This section uses the default background */
+        }
+        
+        .project-item {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-item p {
+            color: #555;
+        }
+
+        /* --- Education Section --- */
+        #education {
+            background-color: #fff;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item p {
+            color: #555;
+            font-style: italic;
+        }
+
+        /* --- Skills Section --- */
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skills-list li {
+            background-color: #e0eafc;
+            color: #34495e;
+            padding: 8px 18px;
+            margin: 8px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        #contact {
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .contact-links {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .contact-links li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .contact-links a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            header h1 {
+                margin-bottom: 10px;
+            }
+
+            header nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            header nav li {
+                margin: 5px 10px;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Himanshu</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>B.Tech CSE Student | Aspiring Data Scientist</h2>
+                <p class="intro">
+                    Hello! I'm Himanshu a first-year Computer Science student at PW IOI-Lucknow
+                    and a Data Science student with IIT Guwahati.
+                </p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    My journey into technology started with a simple curiosity about how things work. Now, as a B.Tech Computer Science Engineering student, I'm turning that curiosity into a career.
+                </p>
+                <p>
+                    I believe the future of technology lies at the intersection of intelligent software and data-driven insights. This belief led me to concurrently enroll in the Data Science program offered by IIT Guwahati. I am driven, resourceful, and always ready for the next challenge.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Achievements & Projects</h2>
+                
+                <article class="project-item">
+                    <h3>Winner | Innovation Wall Challenge 2025</h3>
+                    <p>
+                        <strong>What it was:</strong> Solving a real life problem and turning it into a business model.
+                    </p>
+                    <p>
+                        <strong>My Role:</strong> I conceptualized and pitched <strong>MedConnect</strong>, wich connects doctors and patients. Our solution was selected as the winning entry from over 15 of participants.
+                    </p>
+                </article>
+
+                <article class="project-item">
+                    <h3>Hackathon Participant | Chandigarh University</h3>
+                    <p>
+                        <strong>What it was:</strong> A high-intensity 30hrs coding competition focused on building a project from scratch.
+                    </p>
+                    <p>
+                        <strong>My Contribution:</strong> My team and I built MedConnect. We used only <strong>HTML and Vanilla CSS</strong>, which was a fantastic challenge that deeply strengthened my foundational web skills.
+                    </p>
+                    </article>
+
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h4>Bachelor of Technology (B.Tech), Computer Science</h4>
+                    <p>PW IOI-Lucknow| (2025 - 2029)</p>
+                </div>
+                <div class="education-item">
+                    <h4> "Foundations of Data Science"</h4>
+                    <p>IIT Guwahati (Online Program) | (Ongoing)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>My Skills</h2>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3 (Vanilla)</li>
+                    <li>[Python]</li>
+                    <li>[C/C++]</li>
+                    <li>[Data Analysis Concepts]</li>
+                    <li>[Problem Solving]</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to discussing new projects, collaborations, or internship opportunities.</p>
+                <ul class="contact-links">
+                    <li>Email: <a href="mailto:[your.email@example.com]">himanshudebcs@gmail.com</a></li>
+                    <li>LinkedIn: <a href="www.linkedin.com/in/himanshu-deb-30083a36a" target="_blank">[Your LinkedIn Profile]</a></li>
+                    <li>GitHub: <a href="[your.github.url]" target="_blank">[Your GitHub Profile]</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
